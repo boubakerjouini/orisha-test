@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* ============================================
+   DESIGN SYSTEM — Orisha Socialcare
+   Tokens extracted from Figma Design System
+   ============================================ */
+
+@theme {
+  /* ---- Colors: Module ---- */
+  --color-module-primary: #551c8b;
+  --color-module-primary-light: #f3e8ff;
+
+  /* ---- Colors: Background ---- */
+  --color-bg-default: #f9fafb;
+  --color-bg-surface: #ffffff;
+
+  /* ---- Colors: Stroke ---- */
+  --color-stroke-primary: #d1d5db;
+  --color-stroke-secondary: #e5e7eb;
+
+  /* ---- Colors: Text ---- */
+  --color-text-title: #090d17;
+  --color-text-primary: #111827;
+  --color-text-secondary: #374151;
+  --color-text-tertiary: #6b7280;
+  --color-text-placeholder: #9ca3af;
+  --color-text-invert: #ffffff;
+
+  /* ---- Colors: Neutral ---- */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+
+  /* ---- Colors: Semantic — Status ---- */
+  --color-status-green-bg: #e7f8ec;
+  --color-status-green-border: #a1e1b3;
+  --color-status-green-text: #08481a;
+
+  --color-status-orange-bg: #fff6e6;
+  --color-status-orange-border: #ffd999;
+  --color-status-orange-text: #664000;
+
+  --color-status-blue-bg: #e8f2f9;
+  --color-status-blue-border: #a3cce8;
+  --color-status-blue-text: #116096;
+
+  --color-status-red-bg: #fde8e8;
+  --color-status-red-border: #f5a3a3;
+  --color-status-red-text: #7f1d1d;
+
+  /* ---- Typography: Font Families ---- */
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* ---- Typography: Font Sizes ---- */
+  --text-title: 1.25rem;       /* 20px */
+  --text-body-l: 0.875rem;     /* 14px */
+  --text-body-m: 0.8125rem;    /* 13px */
+  --text-body-s: 0.75rem;      /* 12px */
+  --text-body-xs: 0.6875rem;   /* 11px */
+  --text-body-xxs: 0.625rem;   /* 10px */
+
+  /* ---- Typography: Line Heights ---- */
+  --leading-title: 1.625rem;   /* 26px */
+  --leading-body-l: 1.25rem;   /* 20px */
+  --leading-body-m: 1.1875rem; /* 19px */
+  --leading-body-s: 1.125rem;  /* 18px */
+  --leading-body-xxs: 0.875rem;/* 14px */
+
+  /* ---- Spacing ---- */
+  --spacing-none: 0px;
+  --spacing-xs: 2px;
+  --spacing-s: 4px;
+  --spacing-m: 8px;
+  --spacing-l: 12px;
+  --spacing-xl: 16px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+
+  /* ---- Border Radius ---- */
+  --radius-xs: 4px;
+  --radius-s: 6px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --radius-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-default: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* ---- Base Styles ---- */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-default);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-300);
+  border-radius: var(--radius-full);
+}
