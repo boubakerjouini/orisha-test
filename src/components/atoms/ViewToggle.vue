@@ -12,30 +12,32 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div class="flex items-center rounded-[6px] border border-stroke-primary bg-bg-surface">
+  <div
+    class="flex items-center gap-[2px] rounded-[6px] border border-stroke-primary bg-neutral-100 p-[4px]"
+  >
     <button
-      class="flex h-[34px] w-[36px] items-center justify-center rounded-l-[5px] transition-colors"
+      class="flex h-[32px] items-center justify-center rounded-[4px] px-[12px] transition-all"
       :class="
         props.modelValue === 'list'
-          ? 'bg-module-primary text-text-invert'
-          : 'text-text-secondary hover:bg-neutral-100'
+          ? 'bg-bg-surface text-text-primary shadow-default'
+          : 'text-text-secondary hover:text-text-primary'
       "
       aria-label="Vue liste"
       @click="emit('update:modelValue', 'list')"
     >
-      <PhList :size="16" weight="bold" />
+      <PhList :size="20" />
     </button>
     <button
-      class="flex h-[34px] w-[36px] items-center justify-center rounded-r-[5px] transition-colors"
+      class="flex h-[32px] items-center justify-center rounded-[4px] px-[12px] transition-all"
       :class="
         props.modelValue === 'grid'
-          ? 'bg-module-primary text-text-invert'
-          : 'text-text-secondary hover:bg-neutral-100'
+          ? 'bg-bg-surface text-text-primary shadow-default'
+          : 'text-text-secondary hover:text-text-primary'
       "
       aria-label="Vue trombinoscope"
       @click="emit('update:modelValue', 'grid')"
     >
-      <PhSquaresFour :size="16" weight="bold" />
+      <PhSquaresFour :size="20" />
     </button>
   </div>
 </template>

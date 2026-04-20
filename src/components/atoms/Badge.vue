@@ -4,7 +4,7 @@ import { STATUS_COLOR_MAP, type StatusColor } from '@/types/resident'
 
 const props = defineProps<{
   label: string
-  color: string // hex color from data.json
+  color: string
 }>()
 
 const statusKey = computed<StatusColor>(() => {
@@ -24,13 +24,9 @@ const classes = computed(() => {
 
 <template>
   <span
-    class="inline-flex items-center gap-[4px] rounded-full border px-[8px] py-[2px] text-[10px] font-medium leading-[14px]"
+    class="inline-flex min-h-[20px] min-w-[24px] items-center justify-center rounded-full border px-[6px] text-center text-[10px] font-medium leading-[14px] tracking-[-0.15px]"
     :class="classes"
   >
-    <span
-      class="h-[6px] w-[6px] rounded-full"
-      :style="{ backgroundColor: props.color }"
-    />
     {{ label }}
   </span>
 </template>

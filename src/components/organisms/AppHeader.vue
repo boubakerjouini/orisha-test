@@ -1,34 +1,17 @@
 <script setup lang="ts">
-import { PhCaretRight } from '@phosphor-icons/vue'
-
 defineProps<{
   title: string
-  breadcrumbs?: { label: string; to?: string }[]
+  subtitle?: string
 }>()
 </script>
 
 <template>
-  <header class="flex items-center gap-[8px] py-[16px]">
-    <template v-if="breadcrumbs?.length">
-      <template v-for="(crumb, index) in breadcrumbs" :key="crumb.label">
-        <RouterLink
-          v-if="crumb.to"
-          :to="crumb.to"
-          class="text-[13px] text-text-tertiary hover:text-module-primary transition-colors"
-        >
-          {{ crumb.label }}
-        </RouterLink>
-        <span v-else class="text-[13px] text-text-tertiary">{{ crumb.label }}</span>
-        <PhCaretRight
-          v-if="index < breadcrumbs.length - 1"
-          :size="12"
-          class="text-text-placeholder"
-        />
-      </template>
-      <PhCaretRight :size="12" class="text-text-placeholder" />
-    </template>
+  <div class="flex flex-col gap-[4px]">
     <h1 class="font-heading text-[20px] font-medium leading-[26px] text-text-title">
       {{ title }}
     </h1>
-  </header>
+    <p v-if="subtitle" class="text-[13px] leading-[19px] tracking-[-0.15px] text-text-secondary">
+      {{ subtitle }}
+    </p>
+  </div>
 </template>
