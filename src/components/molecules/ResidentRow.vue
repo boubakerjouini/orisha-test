@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PhCaretRight, PhStar } from '@phosphor-icons/vue'
+import { PhCaretRight } from '@phosphor-icons/vue'
 import Avatar from '@/components/atoms/Avatar.vue'
 import Badge from '@/components/atoms/Badge.vue'
 import type { Resident } from '@/types/resident'
@@ -14,72 +14,81 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <tr
-    class="group cursor-pointer border-b border-stroke-secondary transition-colors hover:bg-neutral-50"
+  <div
+    class="group flex w-full cursor-pointer items-start bg-bg-surface transition-colors hover:bg-neutral-50"
     @click="emit('click', resident.id)"
   >
-    <!-- Nom -->
-    <td class="py-[10px] pl-[16px] pr-[12px]">
-      <div class="flex items-center gap-[12px]">
-        <Avatar :name="resident.nomComplet" size="sm" />
-        <div class="min-w-0">
-          <div class="flex items-center gap-[6px]">
-            <span class="text-[13px] font-medium leading-[19px] text-text-primary truncate">
-              {{ resident.nomComplet }}
-            </span>
-            <PhStar
-              v-if="resident.isFavorite"
-              :size="14"
-              weight="fill"
-              class="shrink-0 text-amber-400"
-            />
-          </div>
-          <span class="text-[12px] leading-[18px] text-text-tertiary">
-            {{ resident.nomNaissance }}
-          </span>
-        </div>
+    <!-- Résident -->
+    <div
+      class="flex min-h-[56px] flex-1 items-center gap-[8px] border-b border-stroke-primary px-[16px] py-[8px]"
+    >
+      <Avatar :name="resident.nomComplet" size="sm" />
+      <div class="min-w-0">
+        <p class="truncate text-[13px] font-medium leading-[19px] tracking-[-0.15px] text-text-primary">
+          {{ resident.nomComplet }}
+        </p>
+        <p class="truncate text-[12px] leading-[18px] tracking-[-0.15px] text-text-tertiary">
+          {{ resident.nomNaissance }}
+        </p>
       </div>
-    </td>
-
-    <!-- Âge -->
-    <td class="py-[10px] px-[12px] text-[13px] leading-[19px] text-text-secondary">
-      {{ resident.ageTexte }}
-    </td>
+    </div>
 
     <!-- Date de naissance -->
-    <td class="py-[10px] px-[12px] text-[13px] leading-[19px] text-text-secondary">
-      {{ resident.dateNaissance }}
-    </td>
+    <div
+      class="flex min-h-[56px] w-[132px] items-center border-b border-stroke-primary px-[16px] py-[8px]"
+    >
+      <span class="text-[13px] leading-[19px] tracking-[-0.15px] text-text-primary">
+        {{ resident.dateNaissance }}
+      </span>
+    </div>
 
     <!-- INS -->
-    <td class="py-[10px] px-[12px] text-[13px] leading-[19px] text-text-secondary font-mono">
-      {{ resident.ins }}
-    </td>
+    <div
+      class="flex min-h-[56px] w-[130px] items-center border-b border-stroke-primary px-[16px] py-[8px]"
+    >
+      <span class="text-[13px] leading-[19px] tracking-[-0.15px] text-text-primary">
+        {{ resident.ins }}
+      </span>
+    </div>
 
     <!-- Secteur -->
-    <td class="py-[10px] px-[12px] text-[13px] leading-[19px] text-text-secondary">
-      {{ resident.secteurSousSecteur.libelleComplet }}
-    </td>
+    <div
+      class="flex min-h-[56px] w-[220px] items-center border-b border-stroke-primary px-[16px] py-[8px]"
+    >
+      <span class="text-[13px] leading-[19px] tracking-[-0.15px] text-text-primary">
+        {{ resident.secteurSousSecteur.libelleComplet }}
+      </span>
+    </div>
 
     <!-- Chambre -->
-    <td class="py-[10px] px-[12px] text-[13px] leading-[19px] text-text-secondary text-center">
-      {{ resident.chambre.libelleEtablissementChambre }}
-    </td>
+    <div
+      class="flex min-h-[56px] w-[88px] items-center border-b border-stroke-primary px-[16px] py-[8px]"
+    >
+      <span class="text-[13px] leading-[19px] tracking-[-0.15px] text-text-primary">
+        {{ resident.chambre.libelleEtablissementChambre }}
+      </span>
+    </div>
 
-    <!-- Statut -->
-    <td class="py-[10px] px-[12px]">
+    <!-- Situation administrative -->
+    <div
+      class="flex min-h-[56px] w-[177px] items-center border-b border-stroke-primary px-[16px] py-[8px]"
+    >
       <Badge
         :label="resident.situationAdministrative.texte"
         :color="resident.situationAdministrative.couleur"
       />
-    </td>
+    </div>
 
-    <!-- Arrow -->
-    <td class="py-[10px] pr-[16px] pl-[4px]">
-      <PhCaretRight
-        :size="16"
-        class="text-text-placeholder transition-colors group-hover:text-text-secondary"
-      />
-    </td>
-  </tr>
+    <!-- Actions -->
+    <div
+      class="flex min-h-[56px] w-[52px] items-center border-b border-stroke-primary py-[8px] pl-0 pr-[12px]"
+    >
+      <button
+        class="flex h-[40px] w-[40px] items-center justify-center rounded-[6px] border border-stroke-primary bg-bg-surface shadow-sm transition-colors group-hover:bg-neutral-50"
+        @click.stop
+      >
+        <PhCaretRight :size="20" class="text-text-secondary" />
+      </button>
+    </div>
+  </div>
 </template>

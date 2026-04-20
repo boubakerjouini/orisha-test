@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { PhFunnelSimple } from '@phosphor-icons/vue'
 import ResidentRow from '@/components/molecules/ResidentRow.vue'
 import type { Resident } from '@/types/resident'
 import { useRouter } from 'vue-router'
@@ -12,59 +13,46 @@ const router = useRouter()
 function navigateToResident(id: string) {
   router.push({ name: 'resident-detail', params: { id } })
 }
+
+const columns = [
+  { key: 'resident', label: 'Résident', class: 'flex-1', hasFilter: true },
+  { key: 'dateNaissance', label: 'Date de naissance', class: 'w-[132px]' },
+  { key: 'ins', label: 'INS', class: 'w-[130px]' },
+  { key: 'secteur', label: 'Secteur', class: 'w-[220px]' },
+  { key: 'chambre', label: 'Chambre', class: 'w-[88px]' },
+  { key: 'situation', label: 'Situation administrative', class: 'w-[177px]' },
+  { key: 'actions', label: '', class: 'w-[52px]' },
+]
 </script>
 
 <template>
-  <div class="overflow-hidden rounded-[8px] border border-stroke-secondary bg-bg-surface">
-    <table class="w-full">
-      <thead>
-        <tr class="border-b border-stroke-secondary bg-neutral-50">
-          <th
-            class="py-[8px] pl-[16px] pr-[12px] text-left text-[10px] font-semibold uppercase tracking-[2px] text-text-tertiary"
-          >
-            Nom
-          </th>
-          <th
-            class="py-[8px] px-[12px] text-left text-[10px] font-semibold uppercase tracking-[2px] text-text-tertiary"
-          >
-            Âge
-          </th>
-          <th
-            class="py-[8px] px-[12px] text-left text-[10px] font-semibold uppercase tracking-[2px] text-text-tertiary"
-          >
-            Date de naissance
-          </th>
-          <th
-            class="py-[8px] px-[12px] text-left text-[10px] font-semibold uppercase tracking-[2px] text-text-tertiary"
-          >
-            INS
-          </th>
-          <th
-            class="py-[8px] px-[12px] text-left text-[10px] font-semibold uppercase tracking-[2px] text-text-tertiary"
-          >
-            Secteur
-          </th>
-          <th
-            class="py-[8px] px-[12px] text-center text-[10px] font-semibold uppercase tracking-[2px] text-text-tertiary"
-          >
-            Chambre
-          </th>
-          <th
-            class="py-[8px] px-[12px] text-left text-[10px] font-semibold uppercase tracking-[2px] text-text-tertiary"
-          >
-            Statut
-          </th>
-          <th class="w-[40px]"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <ResidentRow
-          v-for="resident in residents"
-          :key="resident.id"
-          :resident="resident"
-          @click="navigateToResident"
-        />
-      </tbody>
-    </table>
+  <div
+    class="w-full overflow-hidden rounded-[6px] border border-stroke-primary shadow-sm"
+  >
+    <!-- Header row -->
+    <div class="flex w-full items-start">
+      <div
+        v-for="col in columns"
+        :key="col.key"
+        class="flex h-[40px] max-h-[40px] items-center gap-[4px] border-b border-stroke-primary bg-neutral-100 px-[16px]"
+        :class="col.class"
+      >
+        <span
+          v-if="col.label"
+          class="text-[12px] font-medium leading-[18px] tracking-[-0.15px] text-text-secondary"
+        >
+          {{ col.label }}
+        </span>
+        <PhFunnelSimple v-if="col.hasFilter" :size="16" class="text-text-placeholder" />
+      </div>
+    </div>
+
+    <!-- Body rows -->
+    <ResidentRow
+      v-for="resident in residents"
+      :key="resident.id"
+      :resident="resident"
+      @click="navigateToResident"
+    />
   </div>
 </template>
