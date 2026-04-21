@@ -54,7 +54,7 @@ const gender = computed(() => {
       <InfoBlock label="Date de naissance" :value="resident.dateNaissance" />
       <InfoBlock label="Âge" :value="resident.ageTexte" />
       <InfoBlock label="N° INS" :value="resident.ins" />
-      <InfoBlock label="Secteur" :value="resident.secteurSousSecteur.libelleComplet" />
+      <InfoBlock label="Secteur" :value="resident.secteurSousSecteur.libelleComplet.replace(' > ', ' → ')" />
       <InfoBlock label="Chambre" :value="resident.chambre.libelleEtablissementChambre" />
       <InfoBlock label="Situation" :value="resident.situationAdministrative.texte" />
     </div>
