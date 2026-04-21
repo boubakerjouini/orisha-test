@@ -22,7 +22,7 @@ const emit = defineEmits<{
     <div
       class="flex min-h-[56px] flex-1 items-center gap-[8px] border-b border-stroke-primary px-[16px] py-[8px]"
     >
-      <Avatar :name="resident.nomComplet" size="sm" />
+      <Avatar :name="resident.nomComplet" :id="resident.id" size="sm" />
       <div class="min-w-0">
         <p class="truncate text-[13px] font-medium leading-[19px] tracking-[-0.15px] text-text-primary">
           {{ resident.nomComplet }}
@@ -56,7 +56,7 @@ const emit = defineEmits<{
       class="flex min-h-[56px] w-[220px] items-center border-b border-stroke-primary px-[16px] py-[8px]"
     >
       <span class="text-[13px] leading-[19px] tracking-[-0.15px] text-text-primary">
-        {{ resident.secteurSousSecteur.libelleComplet }}
+        {{ resident.secteurSousSecteur.libelleComplet.replace(' > ', ' → ') }}
       </span>
     </div>
 

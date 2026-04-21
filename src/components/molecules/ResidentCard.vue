@@ -19,7 +19,7 @@ const emit = defineEmits<{
     @click="emit('click', resident.id)"
   >
     <div class="relative mb-[12px]">
-      <Avatar :name="resident.nomComplet" size="lg" />
+      <Avatar :name="resident.nomComplet" :id="resident.id" size="lg" />
       <PhStar
         v-if="resident.isFavorite"
         :size="14"
@@ -37,7 +37,7 @@ const emit = defineEmits<{
     </span>
 
     <span class="mt-[2px] text-[11px] leading-[16px] text-text-placeholder">
-      {{ resident.secteurSousSecteur.libelleComplet }}
+      {{ resident.secteurSousSecteur.libelleComplet.replace(' > ', ' → ') }}
     </span>
 
     <div class="mt-[8px]">

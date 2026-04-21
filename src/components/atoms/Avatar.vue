@@ -4,13 +4,13 @@ import { computed } from 'vue'
 const props = withDefaults(
   defineProps<{
     name: string
+    id?: string
     size?: 'sm' | 'md' | 'lg'
   }>(),
   { size: 'md' }
 )
 
 const initials = computed(() => {
-  // Extract from "M. DURAND Gaston (H)" → "DG" or "Mme THOMAS Madeleine (F)" → "TM"
   const cleaned = props.name
     .replace(/^(M\.|Mme)\s+/i, '')
     .replace(/\s*\([HF]\)\s*$/, '')
@@ -20,6 +20,14 @@ const initials = computed(() => {
     return (parts[0][0] + parts[1][0]).toUpperCase()
   }
   return cleaned.substring(0, 2).toUpperCase()
+})
+
+const avatarSrc = computed(() => {
+  if (!props.id) return null
+  const isFemale = props.name.includes('(F)')
+  const dir = isFemale ? 'Female' : 'Male'
+  const index = (parseInt(props.id) % 5) + 1
+  return `/Avatar/${dir}/${index}.png`
 })
 
 const sizeClasses = computed(() => {
@@ -33,7 +41,15 @@ const sizeClasses = computed(() => {
 </script>
 
 <template>
+  <img
+    v-if="avatarSrc"
+    :src="avatarSrc"
+    :alt="name"
+    class="rounded-full object-cover shrink-0"
+    :class="sizeClasses"
+  />
   <div
+    v-else
     class="flex items-center justify-center rounded-full bg-module-primary-light text-module-primary font-semibold shrink-0"
     :class="sizeClasses"
   >
