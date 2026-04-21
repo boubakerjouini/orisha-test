@@ -92,6 +92,12 @@ src/
 - Message centre "Aucun resident ne correspond a votre recherche"
 - Bouton "Reinitialiser la recherche" qui remet tous les filtres a zero
 
+### Responsive
+- **Mobile** (< 768px) : sidebar masquee, search pleine largeur, grille 1 colonne, vue tableau forcee en grille, bouton "Nouveau resident" icone seul
+- **Tablette** (>= 640px) : grille 2 colonnes, bandeau patient horizontal
+- **Desktop** (>= 1024px) : layout complet, grille 3 colonnes, sidebar visible
+- Onglets fiche resident scrollables horizontalement sur petit ecran
+
 ### Navigation
 - **Breadcrumbs** dynamiques selon la route
 - **Lazy loading** des pages pour le code-splitting
