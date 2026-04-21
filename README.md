@@ -72,3 +72,28 @@ src/
 - **Navigation** fluide avec Vue Router (lazy-loaded)
 - **Responsive** — adaptatif selon la taille d'écran
 - **Sidebar** rétractable
+- **Pagination** avec sélecteur de taille de page et synchronisation URL
+
+## Storybook
+
+```bash
+# Lancer Storybook (port 6006)
+npm run storybook
+
+# Build statique
+npm run build-storybook
+```
+
+Les stories sont colocalisées avec les composants (`*.stories.ts`). Chaque composant possède des stories illustrant ses différents états et variantes.
+
+## Tests
+
+```bash
+# Lancer les tests en mode watch
+npm test
+
+# Exécution unique
+npm run test:run
+```
+
+Les tests utilisent **Vitest** + **@vue/test-utils**. Les fichiers de test sont colocalisés (`*.test.ts`) avec les composants.
