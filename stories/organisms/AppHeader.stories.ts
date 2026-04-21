@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import AppHeader from './AppHeader.vue'
+import AppHeader from '@/components/organisms/AppHeader.vue'
 
 const meta = {
   title: 'Organisms/AppHeader',

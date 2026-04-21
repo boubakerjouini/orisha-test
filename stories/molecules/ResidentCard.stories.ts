@@ -1,12 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import ResidentRow from './ResidentRow.vue'
+import ResidentCard from '@/components/molecules/ResidentCard.vue'
 import { createMockResident } from '@/__mocks__/residents'
 
 const meta = {
-  title: 'Molecules/ResidentRow',
-  component: ResidentRow,
+  title: 'Molecules/ResidentCard',
+  component: ResidentCard,
   tags: ['autodocs'],
-} satisfies Meta<typeof ResidentRow>
+  decorators: [
+    () => ({
+      template: '<div style="width: 220px;"><story /></div>',
+    }),
+  ],
+} satisfies Meta<typeof ResidentCard>
 
 export default meta
 type Story = StoryObj<typeof meta>

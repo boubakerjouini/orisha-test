@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { ref } from 'vue'
-import ResidentFilterPopover from './ResidentFilterPopover.vue'
+import ResidentFilterPopover from '@/components/organisms/ResidentFilterPopover.vue'
 import { mockResidents } from '@/__mocks__/residents'
 
 const meta = {

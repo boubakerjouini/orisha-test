@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import PaginationBar from './PaginationBar.vue'
+import PaginationBar from '@/components/molecules/PaginationBar.vue'
 
 const meta = {
   title: 'Molecules/PaginationBar',

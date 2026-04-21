@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import ViewToggle from './ViewToggle.vue'
+import ViewToggle from '@/components/atoms/ViewToggle.vue'
 
 const meta: Meta<typeof ViewToggle> = {
   component: ViewToggle,

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import FilterBar from './FilterBar.vue'
+import FilterBar from '@/components/organisms/FilterBar.vue'
 import { useFilterStore } from '@/stores/filters'
 
 const meta = {

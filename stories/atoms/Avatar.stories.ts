@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import Avatar from './Avatar.vue'
+import Avatar from '@/components/atoms/Avatar.vue'
 
 const meta: Meta<typeof Avatar> = {
   component: Avatar,

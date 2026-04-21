@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import ResidentGrid from './ResidentGrid.vue'
+import ResidentGrid from '@/components/organisms/ResidentGrid.vue'
 import { createMockResident, mockResidents } from '@/__mocks__/residents'
 
 const meta = {

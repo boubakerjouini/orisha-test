@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { useRouter } from 'vue-router'
-import BreadcrumbBar from './BreadcrumbBar.vue'
+import BreadcrumbBar from '@/components/molecules/BreadcrumbBar.vue'
 
 const meta = {
   title: 'Molecules/BreadcrumbBar',

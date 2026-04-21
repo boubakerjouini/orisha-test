@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import SearchInput from './SearchInput.vue'
+import SearchInput from '@/components/atoms/SearchInput.vue'
 
 const meta: Meta<typeof SearchInput> = {
   component: SearchInput,

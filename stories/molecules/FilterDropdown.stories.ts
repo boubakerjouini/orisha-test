@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import FilterDropdown from './FilterDropdown.vue'
+import FilterDropdown from '@/components/molecules/FilterDropdown.vue'
 
 const meta = {
   title: 'Molecules/FilterDropdown',

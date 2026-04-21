@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import PaginationBar from './PaginationBar.vue'
+import PaginationBar from '@/components/molecules/PaginationBar.vue'
 
 const baseProps = {
   currentPage: 1,

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import SectorSidebar from './SectorSidebar.vue'
+import SectorSidebar from '@/components/organisms/SectorSidebar.vue'
 
 const meta = {
   title: 'Organisms/SectorSidebar',

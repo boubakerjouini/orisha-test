@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import InfoBlock from './InfoBlock.vue'
+import InfoBlock from '@/components/molecules/InfoBlock.vue'
 
 const meta = {
   title: 'Molecules/InfoBlock',

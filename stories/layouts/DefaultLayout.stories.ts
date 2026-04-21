@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import DefaultLayout from './DefaultLayout.vue'
+import DefaultLayout from '@/layouts/DefaultLayout.vue'
 
 const meta = {
   title: 'Layouts/DefaultLayout',

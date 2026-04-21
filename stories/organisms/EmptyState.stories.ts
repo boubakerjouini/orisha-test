@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import EmptyState from './EmptyState.vue'
+import EmptyState from '@/components/organisms/EmptyState.vue'
 
 const meta = {
   title: 'Organisms/EmptyState',
