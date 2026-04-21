@@ -49,6 +49,7 @@ const pages = computed(() => {
       </span>
       <select
         :value="pageSize"
+        aria-label="Résidents par page"
         class="h-[32px] rounded-[6px] border border-stroke-primary bg-bg-surface px-[8px] pr-[24px] text-[13px] leading-[19px] tracking-[-0.15px] text-text-secondary outline-none cursor-pointer hover:bg-neutral-100 transition-colors"
         @change="emit('update:pageSize', Number(($event.target as HTMLSelectElement).value))"
       >
@@ -60,6 +61,7 @@ const pages = computed(() => {
 
     <div class="flex items-center gap-[4px]">
       <button
+        aria-label="Page précédente"
         class="flex h-[32px] w-[32px] items-center justify-center rounded-[6px] border border-stroke-primary bg-bg-surface text-text-secondary transition-colors"
         :class="currentPage === 1 ? 'opacity-40 cursor-not-allowed' : 'hover:bg-neutral-100'"
         :disabled="currentPage === 1"
@@ -90,6 +92,7 @@ const pages = computed(() => {
       </template>
 
       <button
+        aria-label="Page suivante"
         class="flex h-[32px] w-[32px] items-center justify-center rounded-[6px] border border-stroke-primary bg-bg-surface text-text-secondary transition-colors"
         :class="currentPage === totalPages ? 'opacity-40 cursor-not-allowed' : 'hover:bg-neutral-100'"
         :disabled="currentPage === totalPages"

@@ -109,6 +109,7 @@ function cancel() {
         <input
           v-model="search"
           type="text"
+          aria-label="Rechercher un résident"
           placeholder="Rechercher un résident"
           class="h-[40px] w-full rounded-[6px] border border-stroke-primary bg-bg-surface pl-[36px] pr-[8px] text-[13px] leading-[19px] tracking-[-0.15px] text-text-primary placeholder:text-text-placeholder outline-none focus:border-module-primary"
         />

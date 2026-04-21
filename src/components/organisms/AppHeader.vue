@@ -15,6 +15,7 @@ const filterStore = useFilterStore()
     <div class="flex items-center gap-[12px]">
       <!-- Burger menu (mobile only) -->
       <button
+        aria-label="Ouvrir le menu"
         class="flex h-[40px] w-[40px] items-center justify-center rounded-[6px] border border-stroke-primary bg-bg-surface transition-colors hover:bg-neutral-50 md:hidden"
         @click="filterStore.toggleMobileSidebar()"
       >
@@ -33,6 +34,7 @@ const filterStore = useFilterStore()
 
     <!-- Bouton + (mobile only) -->
     <button
+      aria-label="Nouveau résident"
       class="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-module-primary text-text-invert transition-opacity hover:opacity-90 md:hidden"
     >
       <PhPlus :size="20" />

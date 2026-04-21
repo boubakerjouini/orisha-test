@@ -61,6 +61,7 @@ const columns = [
         </span>
         <button
           v-if="col.hasFilter"
+          aria-label="Filtrer les résidents"
           class="flex items-center justify-center rounded-[4px] p-[2px] transition-colors hover:bg-neutral-200"
           :class="filterStore.hasResidentFilter ? 'text-module-primary' : 'text-text-placeholder'"
           @click.stop="toggleFilter"

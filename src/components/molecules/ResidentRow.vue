@@ -84,6 +84,7 @@ const emit = defineEmits<{
       class="flex min-h-[56px] w-[52px] items-center border-b border-stroke-primary py-[8px] pl-0 pr-[12px]"
     >
       <button
+        aria-label="Voir le résident"
         class="flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-[6px] border border-stroke-primary bg-bg-surface shadow-sm transition-colors group-hover:bg-neutral-50"
         @click.stop="emit('click', resident.id)"
       >

@@ -71,6 +71,7 @@ const menuItems = [
     <!-- Collapse toggle -->
     <div class="border-t border-stroke-secondary p-[8px]">
       <button
+        aria-label="Réduire le menu"
         class="flex h-[36px] w-full items-center justify-center rounded-[6px] text-text-tertiary transition-colors hover:bg-neutral-100"
         @click="collapsed = !collapsed"
       >
