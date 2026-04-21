@@ -44,7 +44,7 @@ const subtitle = computed(() => {
 </script>
 
 <template>
-  <div class="flex h-full flex-col gap-[24px] overflow-hidden p-[24px]">
+  <div class="flex h-full flex-col gap-[16px] overflow-hidden p-[16px] md:gap-[24px] md:p-[24px]">
     <!-- Loading state -->
     <div v-if="isLoading" class="flex flex-1 items-center justify-center">
       <div
@@ -67,10 +67,10 @@ const subtitle = computed(() => {
         <div class="flex-1 overflow-y-auto">
           <EmptyState v-if="filtered.length === 0" @reset="filterStore.resetFilters()" />
 
-          <!-- List view: table + pagination in same bordered card -->
+          <!-- List view: table + pagination (desktop only) -->
           <div
             v-else-if="filterStore.viewMode === 'list'"
-            class="overflow-hidden rounded-[6px] border border-stroke-primary shadow-sm"
+            class="hidden overflow-x-auto rounded-[6px] border border-stroke-primary shadow-sm md:block"
           >
             <ResidentTable :residents="paginated" :all-residents="allResidents ?? []" />
             <PaginationBar
@@ -83,8 +83,24 @@ const subtitle = computed(() => {
             />
           </div>
 
+          <!-- Mobile fallback grid when list mode is active -->
+          <template v-if="filterStore.viewMode === 'list' && filtered.length > 0">
+            <div class="md:hidden">
+              <ResidentGrid :residents="paginated" />
+              <PaginationBar
+                class="mt-[16px] rounded-[6px] border border-stroke-primary shadow-sm"
+                :current-page="filterStore.currentPage"
+                :total-pages="totalPages"
+                :total-items="filtered.length"
+                :page-size="filterStore.pageSize"
+                @update:current-page="filterStore.setCurrentPage"
+                @update:page-size="filterStore.setPageSize"
+              />
+            </div>
+          </template>
+
           <!-- Grid view: grid + pagination below -->
-          <template v-else>
+          <template v-else-if="filterStore.viewMode === 'grid'">
             <ResidentGrid :residents="paginated" />
             <PaginationBar
               class="mt-[16px] rounded-[6px] border border-stroke-primary shadow-sm"

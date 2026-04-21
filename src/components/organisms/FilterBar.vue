@@ -8,12 +8,12 @@ const filterStore = useFilterStore()
 </script>
 
 <template>
-  <div class="flex items-start justify-between w-full">
+  <div class="flex flex-col-reverse gap-[12px] md:flex-row md:items-start md:justify-between md:gap-0">
     <!-- Search -->
     <SearchInput v-model="filterStore.search" />
 
-    <!-- Right actions -->
-    <div class="flex items-center gap-[16px]">
+    <!-- Right actions (desktop only) -->
+    <div class="hidden items-center gap-[16px] md:flex">
       <!-- Segmented control -->
       <ViewToggle v-model="filterStore.viewMode" />
 

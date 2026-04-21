@@ -12,6 +12,7 @@ export const useFilterStore = defineStore('filters', () => {
   const viewMode = ref<ViewMode>('list')
   const currentPage = ref(1)
   const pageSize = ref(20)
+  const mobileSidebarOpen = ref(false)
 
   // Getters
   const hasActiveFilters = computed(
@@ -69,6 +70,10 @@ export const useFilterStore = defineStore('filters', () => {
     viewMode.value = mode
   }
 
+  function toggleMobileSidebar() {
+    mobileSidebarOpen.value = !mobileSidebarOpen.value
+  }
+
   function resetFilters() {
     search.value = ''
     sector.value = null
@@ -98,5 +103,7 @@ export const useFilterStore = defineStore('filters', () => {
     currentPage,
     pageSize,
     resetFilters,
+    mobileSidebarOpen,
+    toggleMobileSidebar,
   }
 })
