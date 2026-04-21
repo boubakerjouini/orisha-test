@@ -1,23 +1,24 @@
 <script setup lang="ts">
-import { PhMagnifyingGlass } from '@phosphor-icons/vue'
+import { PhArrowCounterClockwise } from '@phosphor-icons/vue'
 
-defineProps<{
-  message?: string
+const emit = defineEmits<{
+  reset: []
 }>()
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center py-[64px] text-center">
-    <div
-      class="mb-[16px] flex h-[56px] w-[56px] items-center justify-center rounded-full bg-neutral-100"
+  <div class="flex w-full flex-col items-center justify-center gap-[8px] py-[80px]">
+    <p class="text-[13px] font-normal leading-[19px] tracking-[-0.15px] text-text-secondary">
+      Aucun résident ne correspond à votre recherche
+    </p>
+    <button
+      class="flex min-h-[20px] cursor-pointer items-center justify-center gap-[4px]"
+      @click="emit('reset')"
     >
-      <PhMagnifyingGlass :size="24" class="text-text-placeholder" />
-    </div>
-    <p class="text-[14px] font-medium text-text-secondary">
-      {{ message ?? 'Aucun résident trouvé' }}
-    </p>
-    <p class="mt-[4px] text-[13px] text-text-tertiary">
-      Essayez de modifier vos critères de recherche ou vos filtres.
-    </p>
+      <PhArrowCounterClockwise :size="20" class="text-module-primary" />
+      <span class="text-[13px] font-semibold leading-[19px] tracking-[-0.15px] text-module-primary">
+        Réinitialiser la recherche
+      </span>
+    </button>
   </div>
 </template>

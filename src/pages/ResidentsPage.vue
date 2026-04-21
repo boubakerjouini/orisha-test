@@ -65,7 +65,7 @@ const subtitle = computed(() => {
       <!-- Content -->
       <div class="flex min-h-0 flex-1 flex-col">
         <div class="flex-1 overflow-y-auto">
-          <EmptyState v-if="filtered.length === 0" />
+          <EmptyState v-if="filtered.length === 0" @reset="filterStore.resetFilters()" />
 
           <!-- List view: table + pagination in same bordered card -->
           <div
