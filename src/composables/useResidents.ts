@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/vue-query'
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { fetchResidents, fetchResidentById } from '@/api/residents'
 import type { Resident } from '@/types/resident'
 import { useFilterStore } from '@/stores/filters'
@@ -71,11 +71,30 @@ export function useFilteredResidents() {
         if (r.situationAdministrative.texte !== filterStore.status) return false
       }
 
+      // Resident ID filter (from column filter popover)
+      if (filterStore.selectedResidentIds) {
+        if (!filterStore.selectedResidentIds.has(r.id)) return false
+      }
+
       return true
     })
   })
 
   const total = computed(() => residents.value?.length ?? 0)
 
-  return { filtered, total, isLoading, isError }
+  const totalPages = computed(() =>
+    Math.max(1, Math.ceil(filtered.value.length / filterStore.pageSize))
+  )
+
+  const paginated = computed<Resident[]>(() => {
+    const start = (filterStore.currentPage - 1) * filterStore.pageSize
+    return filtered.value.slice(start, start + filterStore.pageSize)
+  })
+
+  // Clamp page if filters reduce results
+  watch(totalPages, (n) => {
+    if (filterStore.currentPage > n) filterStore.currentPage = Math.max(1, n)
+  })
+
+  return { filtered, paginated, totalPages, total, isLoading, isError }
 }

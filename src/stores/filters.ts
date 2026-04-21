@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import type { ViewMode } from '@/types/resident'
 
 export const useFilterStore = defineStore('filters', () => {
@@ -8,38 +8,61 @@ export const useFilterStore = defineStore('filters', () => {
   const sector = ref<string | null>(null)
   const subSector = ref<string | null>(null)
   const status = ref<string | null>(null)
+  const selectedResidentIds = ref<Set<string> | null>(null)
   const viewMode = ref<ViewMode>('list')
+  const currentPage = ref(1)
+  const pageSize = ref(20)
 
   // Getters
   const hasActiveFilters = computed(
-    () => !!search.value || !!sector.value || !!subSector.value || !!status.value
+    () =>
+      !!search.value ||
+      !!sector.value ||
+      !!subSector.value ||
+      !!status.value ||
+      selectedResidentIds.value !== null
   )
 
-  const activeFilterCount = computed(() => {
-    let count = 0
-    if (sector.value) count++
-    if (subSector.value) count++
-    if (status.value) count++
-    return count
-  })
+  const hasResidentFilter = computed(() => selectedResidentIds.value !== null)
 
   // Actions
   function setSearch(value: string) {
     search.value = value
   }
 
+  // Reset page on search change (v-model bypasses setter)
+  watch(search, () => {
+    currentPage.value = 1
+  })
+
   function setSector(value: string | null) {
     sector.value = value
-    // Reset sub-sector when sector changes
     subSector.value = null
+    currentPage.value = 1
   }
 
   function setSubSector(value: string | null) {
     subSector.value = value
+    currentPage.value = 1
   }
 
   function setStatus(value: string | null) {
     status.value = value
+    currentPage.value = 1
+  }
+
+  function setSelectedResidentIds(ids: Set<string> | null) {
+    selectedResidentIds.value = ids
+    currentPage.value = 1
+  }
+
+  function setCurrentPage(page: number) {
+    currentPage.value = page
+  }
+
+  function setPageSize(size: number) {
+    pageSize.value = size
+    currentPage.value = 1
   }
 
   function setViewMode(mode: ViewMode) {
@@ -51,24 +74,29 @@ export const useFilterStore = defineStore('filters', () => {
     sector.value = null
     subSector.value = null
     status.value = null
+    selectedResidentIds.value = null
+    currentPage.value = 1
   }
 
   return {
-    // State
     search,
     sector,
     subSector,
     status,
+    selectedResidentIds,
     viewMode,
-    // Getters
     hasActiveFilters,
-    activeFilterCount,
-    // Actions
+    hasResidentFilter,
     setSearch,
     setSector,
     setSubSector,
     setStatus,
+    setSelectedResidentIds,
     setViewMode,
+    setCurrentPage,
+    setPageSize,
+    currentPage,
+    pageSize,
     resetFilters,
   }
 })
