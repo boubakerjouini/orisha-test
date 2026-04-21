@@ -15,7 +15,7 @@ function navigateToResident(id: string) {
 </script>
 
 <template>
-  <div class="grid grid-cols-3 gap-[12px]">
+  <div class="grid grid-cols-1 gap-[12px] sm:grid-cols-2 lg:grid-cols-3">
     <ResidentCard
       v-for="resident in residents"
       :key="resident.id"

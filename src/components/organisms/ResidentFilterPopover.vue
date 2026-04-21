@@ -27,9 +27,11 @@ const popoverStyle = ref<{ top: string; left: string }>({ top: '0px', left: '0px
 function updatePosition() {
   if (!props.triggerRef) return
   const rect = props.triggerRef.getBoundingClientRect()
+  const popoverWidth = Math.min(360, window.innerWidth - 16)
+  const left = Math.max(8, Math.min(rect.left, window.innerWidth - popoverWidth - 8))
   popoverStyle.value = {
     top: `${rect.bottom + 4}px`,
-    left: `${rect.left}px`,
+    left: `${left}px`,
   }
 }
 
@@ -94,7 +96,7 @@ function cancel() {
 <template>
   <div
     ref="popoverRef"
-    class="fixed z-50 flex w-[360px] flex-col rounded-[8px] border border-stroke-primary bg-bg-surface shadow-default"
+    class="fixed z-50 flex w-[calc(100vw-16px)] max-w-[360px] flex-col rounded-[8px] border border-stroke-primary bg-bg-surface shadow-default"
     :style="{ top: popoverStyle.top, left: popoverStyle.left }"
   >
     <!-- Search input -->

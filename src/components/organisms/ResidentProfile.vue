@@ -54,7 +54,7 @@ onMounted(updateIndicator)
     <div class="isolate flex flex-col shadow-sm">
       <!-- Bandeau patient -->
       <div
-        class="z-[2] flex w-full items-center gap-[12px] border-b border-stroke-primary bg-bg-surface p-[12px]"
+        class="z-[2] flex w-full flex-col gap-[12px] border-b border-stroke-primary bg-bg-surface p-[12px] sm:flex-row sm:items-center"
       >
         <Avatar :name="resident.nomComplet" :id="resident.id" size="lg" shape="rounded" />
 
@@ -63,7 +63,7 @@ onMounted(updateIndicator)
             {{ displayName }}
           </p>
 
-          <div class="flex flex-wrap items-start gap-[4px]">
+          <div class="scrollbar-hide flex w-full items-start gap-[4px] overflow-x-auto pb-[2px] md:flex-wrap">
             <!-- GIR -->
             <InfoTag v-if="resident.gir">
               <span class="text-[10px] font-semibold leading-[14px] tracking-[-0.15px] text-text-primary">
@@ -120,7 +120,7 @@ onMounted(updateIndicator)
 
       <!-- Nav tabs -->
       <div
-        class="z-[1] flex h-[48px] items-center border-b border-stroke-primary bg-bg-surface px-[8px]"
+        class="scrollbar-hide z-[1] flex h-[48px] items-center overflow-x-auto border-b border-stroke-primary bg-bg-surface px-[8px]"
       >
         <div ref="tabsContainerRef" class="relative flex items-center">
           <template v-for="tab in tabs" :key="tab.label">

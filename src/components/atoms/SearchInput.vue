@@ -5,7 +5,7 @@ const model = defineModel<string>({ default: '' })
 </script>
 
 <template>
-  <div class="relative w-[377px]">
+  <div class="relative w-full md:w-[377px]">
     <PhMagnifyingGlass
       class="absolute left-[8px] top-1/2 -translate-y-1/2 text-text-placeholder"
       :size="20"

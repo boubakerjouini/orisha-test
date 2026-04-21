@@ -42,7 +42,7 @@ const pages = computed(() => {
 </script>
 
 <template>
-  <div class="flex items-center justify-between border-t border-stroke-primary bg-bg-surface px-[16px] py-[12px]">
+  <div class="flex flex-col items-center gap-[8px] border-t border-stroke-primary bg-bg-surface px-[16px] py-[12px] sm:flex-row sm:justify-between sm:gap-0">
     <div class="flex items-center gap-[12px]">
       <span class="text-[13px] leading-[19px] tracking-[-0.15px] text-text-tertiary">
         {{ rangeText }}

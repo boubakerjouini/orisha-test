@@ -43,7 +43,7 @@ const columns = [
 
 <template>
   <div
-    class="w-full"
+    class="min-w-[800px]"
   >
     <!-- Header row -->
     <div class="flex w-full items-start">
