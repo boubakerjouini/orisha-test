@@ -15,9 +15,19 @@ defineProps<{
 const router = useRouter()
 const filterStore = useFilterStore()
 const showFilter = ref(false)
+const filterButtonRef = ref<HTMLElement | null>(null)
 
 function navigateToResident(id: string) {
   router.push({ name: 'resident-detail', params: { id } })
+}
+
+function onFilter(ids: Set<string> | null) {
+  filterStore.setSelectedResidentIds(ids)
+}
+
+function toggleFilter(event: MouseEvent) {
+  filterButtonRef.value = event.currentTarget as HTMLElement
+  showFilter.value = !showFilter.value
 }
 
 const columns = [
@@ -33,14 +43,14 @@ const columns = [
 
 <template>
   <div
-    class="w-full overflow-hidden rounded-[6px] border border-stroke-primary shadow-sm"
+    class="w-full"
   >
     <!-- Header row -->
     <div class="flex w-full items-start">
       <div
         v-for="col in columns"
         :key="col.key"
-        class="relative flex h-[40px] max-h-[40px] items-center gap-[4px] border-b border-stroke-primary bg-neutral-100 px-[16px]"
+        class="relative flex h-[40px] max-h-[40px] items-center gap-[4px] border-b border-stroke-primary bg-neutral-100 px-[16px] whitespace-nowrap"
         :class="col.class"
       >
         <span
@@ -52,22 +62,24 @@ const columns = [
         <button
           v-if="col.hasFilter"
           class="flex items-center justify-center rounded-[4px] p-[2px] transition-colors hover:bg-neutral-200"
-          :class="filterStore.status ? 'text-module-primary' : 'text-text-placeholder'"
-          @click.stop="showFilter = !showFilter"
+          :class="filterStore.hasResidentFilter ? 'text-module-primary' : 'text-text-placeholder'"
+          @click.stop="toggleFilter"
         >
           <PhFunnelSimple :size="16" />
         </button>
-
-        <!-- Filter popover -->
-        <ResidentFilterPopover
-          v-if="col.hasFilter && showFilter"
-          :residents="allResidents"
-          :model-value="filterStore.status"
-          @update:model-value="filterStore.setStatus"
-          @close="showFilter = false"
-        />
       </div>
     </div>
+
+    <!-- Filter popover (teleported to body to avoid overflow clipping) -->
+    <Teleport to="body">
+      <ResidentFilterPopover
+        v-if="showFilter"
+        :residents="allResidents"
+        :trigger-ref="filterButtonRef"
+        @filter="onFilter"
+        @close="showFilter = false"
+      />
+    </Teleport>
 
     <!-- Body rows -->
     <ResidentRow
