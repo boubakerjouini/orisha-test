@@ -1,14 +1,20 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { PhFunnelSimple } from '@phosphor-icons/vue'
 import ResidentRow from '@/components/molecules/ResidentRow.vue'
+import ResidentFilterPopover from '@/components/organisms/ResidentFilterPopover.vue'
 import type { Resident } from '@/types/resident'
 import { useRouter } from 'vue-router'
+import { useFilterStore } from '@/stores/filters'
 
 defineProps<{
   residents: Resident[]
+  allResidents: Resident[]
 }>()
 
 const router = useRouter()
+const filterStore = useFilterStore()
+const showFilter = ref(false)
 
 function navigateToResident(id: string) {
   router.push({ name: 'resident-detail', params: { id } })
@@ -34,7 +40,7 @@ const columns = [
       <div
         v-for="col in columns"
         :key="col.key"
-        class="flex h-[40px] max-h-[40px] items-center gap-[4px] border-b border-stroke-primary bg-neutral-100 px-[16px]"
+        class="relative flex h-[40px] max-h-[40px] items-center gap-[4px] border-b border-stroke-primary bg-neutral-100 px-[16px]"
         :class="col.class"
       >
         <span
@@ -43,7 +49,23 @@ const columns = [
         >
           {{ col.label }}
         </span>
-        <PhFunnelSimple v-if="col.hasFilter" :size="16" class="text-text-placeholder" />
+        <button
+          v-if="col.hasFilter"
+          class="flex items-center justify-center rounded-[4px] p-[2px] transition-colors hover:bg-neutral-200"
+          :class="filterStore.status ? 'text-module-primary' : 'text-text-placeholder'"
+          @click.stop="showFilter = !showFilter"
+        >
+          <PhFunnelSimple :size="16" />
+        </button>
+
+        <!-- Filter popover -->
+        <ResidentFilterPopover
+          v-if="col.hasFilter && showFilter"
+          :residents="allResidents"
+          :model-value="filterStore.status"
+          @update:model-value="filterStore.setStatus"
+          @close="showFilter = false"
+        />
       </div>
     </div>
 

@@ -4,10 +4,11 @@ import FilterBar from '@/components/organisms/FilterBar.vue'
 import ResidentTable from '@/components/organisms/ResidentTable.vue'
 import ResidentGrid from '@/components/organisms/ResidentGrid.vue'
 import EmptyState from '@/components/organisms/EmptyState.vue'
-import { useFilteredResidents } from '@/composables/useResidents'
+import { useFilteredResidents, useResidents } from '@/composables/useResidents'
 import { useFilterStore } from '@/stores/filters'
 import { computed } from 'vue'
 
+const { data: allResidents } = useResidents()
 const { filtered, isLoading } = useFilteredResidents()
 const filterStore = useFilterStore()
 
@@ -39,7 +40,7 @@ const subtitle = computed(() => {
       <!-- Content -->
       <div class="flex-1 overflow-y-auto">
         <EmptyState v-if="filtered.length === 0" />
-        <ResidentTable v-else-if="filterStore.viewMode === 'list'" :residents="filtered" />
+        <ResidentTable v-else-if="filterStore.viewMode === 'list'" :residents="filtered" :all-residents="allResidents ?? []" />
         <ResidentGrid v-else :residents="filtered" />
       </div>
     </template>
