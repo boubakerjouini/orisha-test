@@ -28,7 +28,13 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 2,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "2",
@@ -59,7 +65,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 3,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "3",
@@ -90,7 +102,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 4,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "4",
@@ -121,7 +139,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 5,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "5",
@@ -152,7 +176,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 6,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   },
   {
     "id": "6",
@@ -183,7 +213,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 1,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "7",
@@ -214,7 +250,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 2,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "8",
@@ -245,7 +287,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 3,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "9",
@@ -276,7 +324,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 4,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "10",
@@ -307,7 +361,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 5,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   },
   {
     "id": "11",
@@ -338,7 +398,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 6,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "12",
@@ -369,7 +435,13 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 1,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "13",
@@ -400,7 +472,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 2,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "14",
@@ -431,7 +509,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 3,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "15",
@@ -462,7 +546,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 4,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   },
   {
     "id": "16",
@@ -493,7 +583,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 5,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "17",
@@ -524,7 +620,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": true
+    "isFavorite": true,
+    "gir": 6,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "18",
@@ -555,7 +657,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 1,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "19",
@@ -586,7 +694,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 2,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "20",
@@ -617,7 +731,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": true
+    "isFavorite": true,
+    "gir": 3,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   },
   {
     "id": "21",
@@ -648,7 +768,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 4,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "22",
@@ -679,7 +805,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": true
+    "isFavorite": true,
+    "gir": 5,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "23",
@@ -710,7 +842,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": true
+    "isFavorite": true,
+    "gir": 6,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "24",
@@ -741,7 +879,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 1,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "25",
@@ -772,7 +916,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": true
+    "isFavorite": true,
+    "gir": 2,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   },
   {
     "id": "26",
@@ -803,7 +953,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 3,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "27",
@@ -834,7 +990,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 4,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "28",
@@ -865,7 +1027,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 5,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "29",
@@ -896,7 +1064,13 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 6,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "30",
@@ -927,7 +1101,13 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 1,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   },
   {
     "id": "31",
@@ -958,7 +1138,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 2,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "32",
@@ -989,7 +1175,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 3,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "33",
@@ -1020,7 +1212,13 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 4,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "34",
@@ -1051,7 +1249,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 5,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "35",
@@ -1082,7 +1286,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": true
+    "isFavorite": true,
+    "gir": 6,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   },
   {
     "id": "36",
@@ -1113,7 +1323,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 1,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "37",
@@ -1144,7 +1360,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 2,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "38",
@@ -1175,7 +1397,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 3,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "39",
@@ -1206,7 +1434,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 4,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "40",
@@ -1237,7 +1471,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 5,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   },
   {
     "id": "41",
@@ -1268,7 +1508,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 6,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "42",
@@ -1299,7 +1545,13 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 1,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "43",
@@ -1330,7 +1582,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 2,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "44",
@@ -1361,7 +1619,13 @@
       "texte": "Présent",
       "couleur": "#00C851"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 3,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "45",
@@ -1392,7 +1656,13 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 4,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   },
   {
     "id": "46",
@@ -1423,7 +1693,13 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 5,
+    "medecinTraitant": {
+      "nom": "ÄRZTIN",
+      "prenom": "Vincent",
+      "telephone": "06 73 58 29 41"
+    }
   },
   {
     "id": "47",
@@ -1454,7 +1730,13 @@
       "texte": "Absence familiale",
       "couleur": "#33B5E5"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 6,
+    "medecinTraitant": {
+      "nom": "DUPONT",
+      "prenom": "Marie",
+      "telephone": "06 12 34 56 78"
+    }
   },
   {
     "id": "48",
@@ -1485,7 +1767,13 @@
       "texte": "Hospitalisation",
       "couleur": "#FF4444"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 1,
+    "medecinTraitant": {
+      "nom": "MARTIN",
+      "prenom": "Laurent",
+      "telephone": "06 98 76 54 32"
+    }
   },
   {
     "id": "49",
@@ -1516,7 +1804,13 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 2,
+    "medecinTraitant": {
+      "nom": "BERNARD",
+      "prenom": "Claire",
+      "telephone": "06 45 67 89 01"
+    }
   },
   {
     "id": "50",
@@ -1547,6 +1841,12 @@
       "texte": "Sortie temporaire",
       "couleur": "#FFA100"
     },
-    "isFavorite": false
+    "isFavorite": false,
+    "gir": 3,
+    "medecinTraitant": {
+      "nom": "LEROY",
+      "prenom": "Philippe",
+      "telephone": "06 23 45 67 89"
+    }
   }
 ]

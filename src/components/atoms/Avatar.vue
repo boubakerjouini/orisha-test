@@ -6,8 +6,9 @@ const props = withDefaults(
     name: string
     id?: string
     size?: 'sm' | 'md' | 'lg'
+    shape?: 'circle' | 'rounded'
   }>(),
-  { size: 'md' }
+  { size: 'md', shape: 'circle' }
 )
 
 const initials = computed(() => {
@@ -45,13 +46,13 @@ const sizeClasses = computed(() => {
     v-if="avatarSrc"
     :src="avatarSrc"
     :alt="name"
-    class="rounded-full object-cover shrink-0"
-    :class="sizeClasses"
+    class="object-cover shrink-0"
+    :class="[sizeClasses, shape === 'circle' ? 'rounded-full' : 'rounded-[6px]']"
   />
   <div
     v-else
-    class="flex items-center justify-center rounded-full bg-module-primary-light text-module-primary font-semibold shrink-0"
-    :class="sizeClasses"
+    class="flex items-center justify-center bg-module-primary-light text-module-primary font-semibold shrink-0"
+    :class="[sizeClasses, shape === 'circle' ? 'rounded-full' : 'rounded-[6px]']"
   >
     {{ initials }}
   </div>

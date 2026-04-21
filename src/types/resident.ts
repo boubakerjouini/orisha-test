@@ -21,6 +21,12 @@ export interface SituationAdministrative {
   couleur: string
 }
 
+export interface MedecinTraitant {
+  nom: string
+  prenom: string
+  telephone: string
+}
+
 export interface Resident {
   id: string
   prefixedId: string
@@ -34,6 +40,8 @@ export interface Resident {
   chambre: Chambre
   situationAdministrative: SituationAdministrative
   isFavorite: boolean
+  gir?: number
+  medecinTraitant?: MedecinTraitant
 }
 
 /** Map data.json hex colors to semantic status keys */
