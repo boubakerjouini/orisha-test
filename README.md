@@ -192,12 +192,16 @@ L'historique de commits est structure de facon atomique et lisible :
 
 ## Lighthouse
 
-L'application est optimisee pour les metriques Lighthouse :
-- **Performance** — code-splitting, lazy loading, tree-shaking, precache service worker
-- **Accessibilite** — `lang="fr"`, meta tags complets, labels sur les boutons
-- **Bonnes pratiques** — HTTPS ready, pas de mixed content, font-display swap
-- **SEO** — meta description, robots.txt, Open Graph tags
-- **PWA** — manifest valide, service worker, icones maskable, theme-color
+![Lighthouse scores](public/lighthouse.png)
+
+| Categorie | Score |
+|---|---|
+| **Performance** | 98 |
+| **Accessibilite** | 100 |
+| **Bonnes pratiques** | 100 |
+| **SEO** | 100 |
+
+Optimisations appliquees : code-splitting, lazy loading, tree-shaking, precache service worker, `aria-label` sur tous les boutons/inputs, meta tags complets, robots.txt, Open Graph, font-display swap.
 
 ## Storybook
 
